@@ -1,4 +1,4 @@
-module COMPRESSOR_TESTBENCH;
+module pes_cache_compression_tb;
 
 	
 	reg clock;
