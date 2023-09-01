@@ -1,4 +1,4 @@
-module COMPRESSOR(clock,UnCompressedCache,CompressedCache,DeCompressedCache);
+module pes_cache_compression(clock,UnCompressedCache,CompressedCache,DeCompressedCache);
 input clock;
 input [255:0]UnCompressedCache;
 output reg[255:0]CompressedCache,DeCompressedCache;
