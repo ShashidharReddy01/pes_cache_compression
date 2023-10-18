@@ -8,12 +8,12 @@
 
 ![image](https://github.com/ShashidharReddy01/pes_cache_compression/assets/142148810/b4ce88f5-53f2-4b11-a3f3-832c2ee18c89)
 
-<br/>
-<br/>
 ![image](https://github.com/ShashidharReddy01/pes_cache_compression/assets/142148810/3689c477-553f-4155-aa65-ae04b27a713d)
 
 <br/>
-*Implementation of BDI cache line compression algorithm*
+
+## *Implementation of BDI cache line compression algorithm*
+
 <br/>
 <br/>
 <details>
@@ -812,6 +812,7 @@ endmodule
 </details>
 <details>
 <summary>Result</summary>
+	
 + 8 cache lines of each type were included in the uncompressed data file to get the below result:
 + No. of uncompressed lines = 40
 + No. of uncompressed bytes = 2.58KB
