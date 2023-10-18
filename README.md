@@ -760,6 +760,7 @@ endmodule
 
 <details>
 <summary>Synthesis</summary>
+	
 ## Synthesis
 
 + Commands
@@ -792,6 +793,7 @@ endmodule
 
   **As there are more than 20000 cells block diagram is not showing up on terminal**
   **Source Google**
+  
   ![image](https://github.com/ShashidharReddy01/pes_cache_compression/assets/142148810/7311802a-3f50-4ce3-8462-290a8d75d71e)
 
 
