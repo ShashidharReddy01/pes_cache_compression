@@ -29,7 +29,9 @@ wire [143:0]CCL6;
 		#50 UnCompressedCache = {32'h00007788,32'h00006677,32'h00005566,32'h00004455,32'h00003344,32'h00002233,32'h00001122,32'h00000000};
 		#50 UnCompressedCache = {16'h0085,16'h0080,16'h0075,16'h0070,16'h0065,16'h0060,16'h0055,16'h0050,16'h0040,16'h0035,16'h0030,16'h0025,16'h0020,16'h0015,16'h0010,16'h0000};
 	end
-    
+        initial begin 
+		$dumpfile("simulation.vcd");
+		$dumpvars(0,cache_compression_tb.v);
 always
 #5 clock = ~clock;	 
 endmodule
