@@ -5,6 +5,13 @@
 <br/>
 ![img](https://askleo.askleomedia.com/wp-content/uploads/2013/11/cache.jpg)
 <br/>
+
+![image](https://github.com/ShashidharReddy01/pes_cache_compression/assets/142148810/b4ce88f5-53f2-4b11-a3f3-832c2ee18c89)
+
+<br/>
+<br/>
+![image](https://github.com/ShashidharReddy01/pes_cache_compression/assets/142148810/3689c477-553f-4155-aa65-ae04b27a713d)
+
 <br/>
 *Implementation of BDI cache line compression algorithm*
 <br/>
@@ -725,4 +732,89 @@ endmodule
 
 ```
 
+</details>
+<details>
+<summary>Installation of Yosys and GTK wave</summary>
+
+`git clone https://github.com/YosysHQ/yosys.git `
+
+`cd yosys`
+
+`sudo apt install make`
+
+`sudo apt-get update`
+
+`sudo apt-get install build-essential clang bison flex  libreadline-dev gawk tcl-dev libffi-dev git  graphviz xdot pkg-config python3 libboost-system-dev libboost-python-dev libboost-filesystem-dev zlib1g-dev`
+
+*Comment the export path in bashrc for the code given below to work*
+
+`make config-gcc`
+
+`make -j 4`
+
+`sudo make install`
+
+`sudo apt install gtkwave`
+
+</details>
+
+<details>
+<summary>Synthesis</summary>
+## Synthesis
+
++ Commands
+  `yosys`
+
+  `read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib`
+
+  `read_verilog cache_compression.v`
+
+  `synth -top cache_compression`
+
+  `abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib`
+
+  `show`
+
++ Screenshots
+
+  ![image](https://github.com/ShashidharReddy01/pes_cache_compression/assets/142148810/0d7e43bb-454f-4338-ab20-0a293b761a64)
+
+  ![image](https://github.com/ShashidharReddy01/pes_cache_compression/assets/142148810/df5cd511-7d06-4087-9277-35456f41e294)
+
+  ![image](https://github.com/ShashidharReddy01/pes_cache_compression/assets/142148810/4775b5f4-946e-421c-8eac-d5a13a3f8c6e)
+
+  ![image](https://github.com/ShashidharReddy01/pes_cache_compression/assets/142148810/af9c10e0-f663-4904-955d-9ba732bef21a)
+
+  ![image](https://github.com/ShashidharReddy01/pes_cache_compression/assets/142148810/5a4a231f-08da-43c4-a441-1e22008e85fa)
+
+</details>
+
+<details>
+<summary>GLS(Gate Level Simulation)</summary>
+
++ Commands
+  `cd vlsi/sky130RTLDesignAndSynthesisWorkshop/verilog_files`
+
+  `iverilog cache_compression.v pes_cache_compression_tb.v`
+
+  `./a.out`
+
+  `gtkwave simulation.vcd`
+
++ Screenshots
+
+  ![image](https://github.com/ShashidharReddy01/pes_cache_compression/assets/142148810/9834d7b5-776f-4f1e-8f28-d81ad1797a34)
+
+  ![image](https://github.com/ShashidharReddy01/pes_cache_compression/assets/142148810/24d87ca9-1515-4a84-bcfe-bda441b1e657)
+
+  ![image](https://github.com/ShashidharReddy01/pes_cache_compression/assets/142148810/191b2739-6e24-4419-a8e6-05c3266a6261)
+
+</details>
+<details>
+<summary>Result</summary>
++ 8 cache lines of each type were included in the uncompressed data file to get the below result:
++ No. of uncompressed lines = 40
++ No. of uncompressed bytes = 2.58KB
++ No. of compressed bytes= 1.25KB
++ Compression Ratio = 2.064
 </details>
