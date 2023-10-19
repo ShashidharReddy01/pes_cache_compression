@@ -776,6 +776,12 @@ endmodule
 
   `show`
 
+  `write_verilog -noattr pes_ripple_counter_net.v`
+
+  `iverilog ../verilog_model/primitives.v ../verilog_model/sky130_fd_sc_hd.v pes_cache_compression_net.v pes_cache_compression_tb.v`
+
+  `gtkwave pes_ripco_tb.vcd`
+
 + Screenshots
 
   ![image](https://github.com/ShashidharReddy01/pes_cache_compression/assets/142148810/0d7e43bb-454f-4338-ab20-0a293b761a64)
@@ -790,15 +796,22 @@ endmodule
 
   ![image](https://github.com/ShashidharReddy01/pes_cache_compression/assets/142148810/f3ac1ac4-989a-4481-80c7-52ab18cf5743)
 
+  ![image](https://github.com/ShashidharReddy01/pes_cache_compression/assets/142148810/48d7f0a3-7925-4419-a582-dce3f92d6053)
 
+  ![image](https://github.com/ShashidharReddy01/pes_cache_compression/assets/142148810/e66ff81f-d342-4c3f-86f1-34ef523a615e)
+
+  
   **As there are more than 20000 cells block diagram is not showing up on terminal**
   
   **Source Google**
   
   ![image](https://github.com/ShashidharReddy01/pes_cache_compression/assets/142148810/7311802a-3f50-4ce3-8462-290a8d75d71e)
 
+  ![image](https://github.com/ShashidharReddy01/pes_cache_compression/assets/142148810/4d89eedb-49cd-4639-95d4-8cfe56617897)
 
+  ![image](https://github.com/ShashidharReddy01/pes_cache_compression/assets/142148810/56239f97-7d14-4f6b-bc7e-02e8698fdcbc)
 
+  
 </details>
 
 <details>
