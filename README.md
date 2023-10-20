@@ -780,7 +780,7 @@ endmodule
 
   `iverilog ../verilog_model/primitives.v ../verilog_model/sky130_fd_sc_hd.v pes_cache_compression_net.v pes_cache_compression_tb.v`
 
-  `gtkwave pes_ripco_tb.vcd`
+  `gtkwave simulation.vcd`
 
 + Screenshots
 
