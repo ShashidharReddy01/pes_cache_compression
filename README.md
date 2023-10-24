@@ -844,3 +844,102 @@ endmodule
 + No. of compressed bytes= 1.25KB
 + Compression Ratio = 2.064
 </details>
+<details>
+<summary>Installation of ngspice, magic and OpenLANE</summary>
+
+**Commands**
+
+`
+cd $HOME
+sudo apt-get install libxaw7-dev
+tar -zxvf ngspice-41.tar.gz
+cd ngspice-41
+mkdir release
+cd release
+../configure  --with-x --with-readline=yes --disable-debug
+sudo make
+sudo make install
+`
+
+**ngspice magic**
+
+`
+sudo apt-get install m4
+sudo apt-get install tcsh
+sudo apt-get install csh
+sudo apt-get install libx11-dev
+sudo apt-get install tcl-dev tk-dev
+sudo apt-get install libcairo2-dev
+sudo apt-get install mesa-common-dev libglu1-mesa-dev
+sudo apt-get install libncurses-dev
+git clone https://github.com/RTimothyEdwards/magic
+cd magic
+./configure
+sudo make
+sudo make install
+`
+
+**OpenLANE**
+
+```
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt install -y build-essential python3 python3-venv python3-pip make git
+
+sudo apt install apt-transport-https ca-certificates curl software-properties-common
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+
+echo "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+
+sudo apt update
+sudo apt install docker-ce docker-ce-cli containerd.io
+sudo docker run hello-world
+sudo groupadd docker
+sudo usermod -aG docker $USER
+sudo reboot 
+```
+
+**To install the PDKs and Tools**
+
+`
+cd $HOME
+git clone https://github.com/The-OpenROAD-Project/OpenLane
+cd OpenLane
+make
+make test
+`
+</details>
+
+<details>
+<summary>OpenLane Flow</summary>
+	
+<br>
+
+Steps to be followed:
+
++ Create a folder in design - pes_cache_compression
++ Enter your designs folder
++ create a config.json file by typing `./flow.tcl -design pes_cache_compression -init_design_config -add_to_designs` after `make mount`
++ make a new directory called 'src'
++ Enter src folder
++ Add your design file & sky130_fd_sc_hd__(fast-slow-typical) files
++ Now in the main 'Openlane' directory type **mkdir pdks**.
++ copy and paste sky130_fd_sc_hd.v in it
++ type command `make mount`
++ then type `./flow.tcl -interactive`
++ Type `prep -design cache_compression` To prep the design type
+
+![image](https://github.com/ShashidharReddy01/pes_cache_compression/assets/142148810/90b7b5a6-9326-4c49-94b3-c417633d0af7)
+
+![image](https://github.com/ShashidharReddy01/pes_cache_compression/assets/142148810/13b12c4e-d4a8-4cfa-b8b0-e6b97d5d490c)
+
+![image](https://github.com/ShashidharReddy01/pes_cache_compression/assets/142148810/58fc8296-e1d7-4121-91c3-f33cdb3eb57d)
+
+![image](https://github.com/ShashidharReddy01/pes_cache_compression/assets/142148810/b0e27634-09d5-47ec-812a-0138048c27eb)
+
+![image](https://github.com/ShashidharReddy01/pes_cache_compression/assets/142148810/80da9f6a-6753-4497-ae28-877968f59d95)
+
+
+
+
+</details>
