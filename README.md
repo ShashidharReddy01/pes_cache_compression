@@ -922,22 +922,163 @@ Steps to be followed:
 + create a config.json file by typing `./flow.tcl -design pes_cache_compression -init_design_config -add_to_designs` after `make mount`
 + make a new directory called 'src'
 + Enter src folder
+  
+  ![image](https://github.com/ShashidharReddy01/pes_cache_compression/assets/142148810/90b7b5a6-9326-4c49-94b3-c417633d0af7)
+  
 + Add your design file & sky130_fd_sc_hd__(fast-slow-typical) files
+
+  ![image](https://github.com/ShashidharReddy01/pes_cache_compression/assets/142148810/13b12c4e-d4a8-4cfa-b8b0-e6b97d5d490c)
+
 + Now in the main 'Openlane' directory type **mkdir pdks**.
 + copy and paste sky130_fd_sc_hd.v in it
 + type command `make mount`
+
+  ![image](https://github.com/ShashidharReddy01/pes_cache_compression/assets/142148810/13b12c4e-d4a8-4cfa-b8b0-e6b97d5d490c)
+
 + then type `./flow.tcl -interactive`
 + Type `prep -design cache_compression` To prep the design type
 
-![image](https://github.com/ShashidharReddy01/pes_cache_compression/assets/142148810/90b7b5a6-9326-4c49-94b3-c417633d0af7)
+  ![image](https://github.com/ShashidharReddy01/pes_cache_compression/assets/142148810/b0e27634-09d5-47ec-812a-0138048c27eb)
 
-![image](https://github.com/ShashidharReddy01/pes_cache_compression/assets/142148810/13b12c4e-d4a8-4cfa-b8b0-e6b97d5d490c)
+  ![image](https://github.com/ShashidharReddy01/pes_cache_compression/assets/142148810/80da9f6a-6753-4497-ae28-877968f59d95)
 
-![image](https://github.com/ShashidharReddy01/pes_cache_compression/assets/142148810/58fc8296-e1d7-4121-91c3-f33cdb3eb57d)
++ Type `run_synthesis`
 
-![image](https://github.com/ShashidharReddy01/pes_cache_compression/assets/142148810/b0e27634-09d5-47ec-812a-0138048c27eb)
+  ![image](https://github.com/ShashidharReddy01/pes_cache_compression/assets/142148810/2f6f7822-08d7-4c7e-853c-f17d0269feed)
 
-![image](https://github.com/ShashidharReddy01/pes_cache_compression/assets/142148810/80da9f6a-6753-4497-ae28-877968f59d95)
+  **1-yosys_4.stat.rpt**
+
+  ![image](https://github.com/ShashidharReddy01/pes_cache_compression/assets/142148810/0c35a23a-d761-41d6-a37e-e0208a66b1ac)
+
+  ![image](https://github.com/ShashidharReddy01/pes_cache_compression/assets/142148810/1dbac1d1-5f3c-4285-a818-96771e2293bb)
+
+  **1-yosys_dff.stat**
+
+  ![image](https://github.com/ShashidharReddy01/pes_cache_compression/assets/142148810/19702638-322f-4b24-880b-e1304faefa83)
+
+  **1-yosys_pre.stat**
+
+  ![image](https://github.com/ShashidharReddy01/pes_cache_compression/assets/142148810/0cb9bcd0-a8c8-4444-8630-250a5a6e49b4)
+
+  **2-opensta.min_max.rpt**
+
+  ![image](https://github.com/ShashidharReddy01/pes_cache_compression/assets/142148810/7a8c5d75-a654-486a-85ef-ff4806e398e8)
+
+  **2-opensta.slew.rpt**
+
+  ![image](https://github.com/ShashidharReddy01/pes_cache_compression/assets/142148810/6697287c-9f1b-4610-8abb-f33af6c23f2e)
+
++ Calculating Flop Ratio
+  
+  ```
+  
+  Flop ratio = Number of D Flip flops 
+               ______________________
+               Total Number of cells
+
+  Flop Ratio = 0.06
+  ```
++ **Floorplan**
+  Physical design is process of transforming netlist into layout which is manufacture-able [GDS]. Physical design process is often referred as PnR (Place and Route) / APR (Automatic Place & Route). 
+  Main steps in physical design are placement of all logical cells, clock tree synthesis & routing. During this process of physical design timing, power, design & technology constraints have to be 
+  met. Further design might require being optimized w.r.t area, power and performance
++ Invoke floorplan using command `run_floorplan`
+
+  ![image](https://github.com/ShashidharReddy01/pes_cache_compression/assets/142148810/c8b44853-e4da-4a34-82b7-c7e082a92ebc)
+
+
+  ![image](https://github.com/ShashidharReddy01/pes_cache_compression/assets/142148810/df09d40a-a828-400e-b0b9-80667bcd89ba)
+
+  + Die Area
+
+    ![image](https://github.com/ShashidharReddy01/pes_cache_compression/assets/142148810/56749d1c-8a1e-4145-9a7f-6f571b1f7e33)
+
+  + Core Area
+
+    ![image](https://github.com/ShashidharReddy01/pes_cache_compression/assets/142148810/86dddaf5-9ffc-4c8f-8262-c0e1fef115ba)
+
+  + End Cap and Tap Cells
+ 
+    ![image](https://github.com/ShashidharReddy01/pes_cache_compression/assets/142148810/6415552c-56e9-4989-919c-c740a0fb41f4)
+
++ Open Floorplan in the magic tool
+
+  `magic -T /home/Vsduser/Desktop/OpenLane/pdks/sky130A/libs.tech/magic/sky130A.tech read ../../tmp/merged_unpadded.lef def read cache_compression.floorplan.def &  `
+
+  ![image](https://github.com/ShashidharReddy01/pes_cache_compression/assets/142148810/03d32d09-a166-49a9-85f4-cabb0399030e)
+
+  - In the layout, many i/o pins can be seen at the border of the layout, which are equidistant from each other by default.
+  ![image](https://github.com/ShashidharReddy01/pes_cache_compression/assets/142148810/4a6bd743-0465-4994-9700-0e1f62ee8f70)
+
+  ![image](https://github.com/ShashidharReddy01/pes_cache_compression/assets/142148810/e4274c85-d83e-47eb-a42d-148e1f596b91)
+
+  - Decompressed cache
+
+  ![image](https://github.com/ShashidharReddy01/pes_cache_compression/assets/142148810/65a089a4-7491-4b7a-9b36-1154d8748f71)
+
+  - UnCompressed cache
+ 
+  ![image](https://github.com/ShashidharReddy01/pes_cache_compression/assets/142148810/4a714673-fb4f-4471-8aa7-339e5fa04e5b)
+
+  
+
+
++ Invoke placement using command `run_placement`
+
+  ![image](https://github.com/ShashidharReddy01/pes_cache_compression/assets/142148810/b49b2e04-4d51-465f-8ac5-9b99f83439ef)
+
+  ![image](https://github.com/ShashidharReddy01/pes_cache_compression/assets/142148810/bcca2b71-289e-4de3-92e0-f9a9d4838639)
+
+  ![image](https://github.com/ShashidharReddy01/pes_cache_compression/assets/142148810/6f3cb8ec-3d85-402f-beea-a3e44d8b0a8b)
+
++ To invoke magic tool type  `magic -T /home/Vsduser/Desktop/OpenLane/pdks/sky130A/libs.tech/magic/sky130A.tech read ../../tmp/merged_unpadded.lef def read cache_compression.placement.def &`
+
+  ![image](https://github.com/ShashidharReddy01/pes_cache_compression/assets/142148810/de7521d4-31a7-421d-a156-f230e8fcea82)
+
+  ![image](https://github.com/ShashidharReddy01/pes_cache_compression/assets/142148810/01aefd74-acd0-47b8-8428-581b6f38f514)
+
+  ![image](https://github.com/ShashidharReddy01/pes_cache_compression/assets/142148810/56b2a237-7553-40e2-b497-e3a1c2a862ea)
+
+  ![image](https://github.com/ShashidharReddy01/pes_cache_compression/assets/142148810/72d338ee-bbba-4c22-8478-fc4ddcb9463b)
+
++ **Clock Tree Synthesis(CTS):**
+  Clock Tree Synthesis (CTS) is one of the most important stages in PnR. CTS QoR decides timing convergence & power. In most of the ICs clock consumes 30-40 % of total power. So efficient clock 
+  architecture, clock gating & clock tree implementation helps to reduce power
+
++ **Routing**
+  Routing is the stage after Clock Tree Synthesis and optimization where-
+
+  Exact paths for the interconnection of standard cells and macros and I/O pins are determined.
+  Electrical connections using metals and vias are created in the layout, defined by the logical connections present in the netlist.
+  After CTS, we have information of all the placed cells, blockages, clock tree buffers/inverters and I/O pins. The tool relies on this information to electrically complete all connections defined in 
+  the netlist such that-
+
+  There are minimal DRC violations while routing.
+  
+  The design is 100% routed with minimal LVS violations.
+  
+  There are minimal SI related violations.
+  
+  There must be no or minimal congestion hot spots.
+  
+  The Timing DRCs are met.
+  
+  The Timing QoR is good.
+  
+  Routing is performed in two stages:
+
+  Fast route - Implemented using FastROAD. It generates routing guides.
+  
+  Detailed route - Implemented using TritonRoute. It uses the routing guides generated in fast route to find the best route and makes connections.
+  
++ Invoke routing by `run_routing`
+
+  ![image](https://github.com/ShashidharReddy01/pes_cache_compression/assets/142148810/900a9d7e-36ed-49c0-afbb-d013dbf0615e)
+
+  ![image](https://github.com/ShashidharReddy01/pes_cache_compression/assets/142148810/3d3eeacc-d1de-4656-aff5-010394116bde)
+
+  
+
 
 
 
