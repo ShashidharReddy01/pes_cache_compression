@@ -12,10 +12,8 @@
 
 <br/>
 
-## *Implementation of BDI cache line compression algorithm*
+# *Implementation of BDI cache line compression algorithm*
 
-<br/>
-<br/>
 <details>
 <summary>Project Overview</summary>
   
@@ -844,7 +842,12 @@ endmodule
 + No. of compressed bytes= 1.25KB
 + Compression Ratio = 2.064
 </details>
-<details>
+
+
+
+# *OpenLane Flow*
+
+ <details>
 <summary>Installation of ngspice, magic and OpenLANE</summary>
 
 **Commands**
@@ -910,10 +913,6 @@ make test
 `
 </details>
 
-<details>
-<summary>OpenLane Flow</summary>
-	
-<br>
 <details>
 	<summary>Steps to invoke OpenLane</summary>
 
@@ -1337,7 +1336,7 @@ Final usage/overflow report:
 ```
 </details>
 
-</details>
+
 
 
 ## Acknowlegedgements
