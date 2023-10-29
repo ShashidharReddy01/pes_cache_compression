@@ -1029,6 +1029,9 @@ Steps to be followed:
 
   ![image](https://github.com/ShashidharReddy01/pes_cache_compression/assets/142148810/bcca2b71-289e-4de3-92e0-f9a9d4838639)
 
+  ![image](https://github.com/ShashidharReddy01/pes_cache_compression/assets/142148810/0dccfe7e-5084-43f5-aa38-14cf76800c7c)
+
+
   ![image](https://github.com/ShashidharReddy01/pes_cache_compression/assets/142148810/6f3cb8ec-3d85-402f-beea-a3e44d8b0a8b)
 
 + To invoke magic tool type  `magic -T /home/Vsduser/Desktop/OpenLane/pdks/sky130A/libs.tech/magic/sky130A.tech read ../../tmp/merged_unpadded.lef def read cache_compression.placement.def &`
@@ -1044,6 +1047,19 @@ Steps to be followed:
 + **Clock Tree Synthesis(CTS):**
   Clock Tree Synthesis (CTS) is one of the most important stages in PnR. CTS QoR decides timing convergence & power. In most of the ICs clock consumes 30-40 % of total power. So efficient clock 
   architecture, clock gating & clock tree implementation helps to reduce power
+  - Type the command `run_cts`
+    
+    ![image](https://github.com/ShashidharReddy01/pes_cache_compression/assets/142148810/d9310763-7beb-4417-872d-222d7b188afb)
+
+    ![image](https://github.com/ShashidharReddy01/pes_cache_compression/assets/142148810/f5dc9efa-fd6f-43ea-89f8-4c2d1f404233)
+
+    ![image](https://github.com/ShashidharReddy01/pes_cache_compression/assets/142148810/f4a117cc-9438-423d-a51b-054921916d27)
+
+    ![image](https://github.com/ShashidharReddy01/pes_cache_compression/assets/142148810/780eacdf-ac05-4d37-b2ab-15c6a3d0a796)
+
+    ![image](https://github.com/ShashidharReddy01/pes_cache_compression/assets/142148810/61793125-27b6-4fb3-b0aa-26e2714a86d0)
+
+    ![image](https://github.com/ShashidharReddy01/pes_cache_compression/assets/142148810/b0b39ead-c3f3-4ac4-a045-2ec061466728)
 
 + **Routing**
   Routing is the stage after Clock Tree Synthesis and optimization where-
@@ -1073,9 +1089,234 @@ Steps to be followed:
   
 + Invoke routing by `run_routing`
 
-  ![image](https://github.com/ShashidharReddy01/pes_cache_compression/assets/142148810/900a9d7e-36ed-49c0-afbb-d013dbf0615e)
+  ![image](https://github.com/ShashidharReddy01/pes_cache_compression/assets/142148810/68d3e1d1-fff5-4b4d-8307-da46d40a417e)
 
-  ![image](https://github.com/ShashidharReddy01/pes_cache_compression/assets/142148810/3d3eeacc-d1de-4656-aff5-010394116bde)
+  ![image](https://github.com/ShashidharReddy01/pes_cache_compression/assets/142148810/97e34727-2a61-4aea-a70a-5a999bffcdb8)
+
+  ![image](https://github.com/ShashidharReddy01/pes_cache_compression/assets/142148810/8a5093b2-19b4-4a54-b4de-8c732d55055d)
+
+  - 0th optimization iteration(42888 violation)
+
+    ![image](https://github.com/ShashidharReddy01/pes_cache_compression/assets/142148810/a85d5bf9-e53e-43af-9081-e39c548bb519)
+
+ - 1st optimazation iteration (22465 violations)
+
+   ![image](https://github.com/ShashidharReddy01/pes_cache_compression/assets/142148810/8f842459-cece-4573-82d3-fac7de22c2ae)
+
+  - 2nd optimazation iteration (21561 violations)
+
+    ![image](https://github.com/ShashidharReddy01/pes_cache_compression/assets/142148810/bed3e731-7bc9-4cd4-8f62-35d7ec057b49)
+
+  - 3rd optimazation iteration(2802 violations)
+
+    ![image](https://github.com/ShashidharReddy01/pes_cache_compression/assets/142148810/e66cc1f9-c0de-40b3-a18e-b3e14d2ae701)
+
+
+  - 4th optimazation iteration(246 violations)
+ 
+    ![image](https://github.com/ShashidharReddy01/pes_cache_compression/assets/142148810/57b3ab36-166c-4c1b-9458-fb1cbf8a26e5)
+
+  - 5th optimazation iteration(36 violations) and so one till 57th iteration
+ 
+    ![image](https://github.com/ShashidharReddy01/pes_cache_compression/assets/142148810/c69b3a8c-397f-49a9-9ea2-7e096c3caa3d)
+
+    ![image](https://github.com/ShashidharReddy01/pes_cache_compression/assets/142148810/1ed769e0-08e3-4fae-b512-bbce698e5bd3)
+    
+  - 57th optimization iteration(0 violations)
+
+    ![image](https://github.com/ShashidharReddy01/pes_cache_compression/assets/142148810/158f6d04-f404-411f-9761-ec854c9ffaf2)
+
++ complete detail routing
+
+  ![image](https://github.com/ShashidharReddy01/pes_cache_compression/assets/142148810/03c24a24-5d7e-4231-a647-04918cc7eda7)
+
+  ![image](https://github.com/ShashidharReddy01/pes_cache_compression/assets/142148810/85e80776-43cc-4cdd-ad73-c96fcd09053c)
+
+  ![image](https://github.com/ShashidharReddy01/pes_cache_compression/assets/142148810/20cb1236-d9a3-4697-a60b-754b9f61b853)
+
+  ![image](https://github.com/ShashidharReddy01/pes_cache_compression/assets/142148810/c6111d18-e7b7-4ee5-a2e1-68808ee62451)
+
+  ![image](https://github.com/ShashidharReddy01/pes_cache_compression/assets/142148810/d0922590-ea59-4285-beeb-c75d92afe660)
+
+  ![image](https://github.com/ShashidharReddy01/pes_cache_compression/assets/142148810/66a6b35d-9c52-4b47-a897-886bcef9772b)
+
+  ![image](https://github.com/ShashidharReddy01/pes_cache_compression/assets/142148810/25a58ac8-ca6e-4efb-ac57-b21b6f6b3dc1)
+
+
+```
+  First L Route
+[INFO] WIRELEN : 224999, WIRELEN1 : 224999
+[INFO] NumSeg  : 49161
+[INFO] NumShift: 1538
+[Overflow Report] Total hCap    : 267521
+[Overflow Report] Total vCap    : 212550
+[Overflow Report] Total Usage   : 224999
+[Overflow Report] Max H Overflow: 0
+[Overflow Report] Max V Overflow: 1
+[Overflow Report] Max Overflow  : 1
+[Overflow Report] Num Overflow e: 1
+[Overflow Report] H   Overflow  : 0
+[Overflow Report] V   Overflow  : 1
+[Overflow Report] Final Overflow: 1
+
+Second L Route
+[Overflow Report] Total hCap    : 267521
+[Overflow Report] Total vCap    : 212550
+[Overflow Report] Total Usage   : 224999
+[Overflow Report] Max H Overflow: 0
+[Overflow Report] Max V Overflow: 0
+[Overflow Report] Max Overflow  : 0
+[Overflow Report] Num Overflow e: 0
+[Overflow Report] H   Overflow  : 0
+[Overflow Report] V   Overflow  : 0
+[Overflow Report] Final Overflow: 0
+
+First Z Route
+[Overflow Report] Total hCap    : 267521
+[Overflow Report] Total vCap    : 212550
+[Overflow Report] Total Usage   : 224999
+[Overflow Report] Max H Overflow: 0
+[Overflow Report] Max V Overflow: 0
+[Overflow Report] Max Overflow  : 0
+[Overflow Report] Num Overflow e: 0
+[Overflow Report] H   Overflow  : 0
+[Overflow Report] V   Overflow  : 0
+[Overflow Report] Final Overflow: 0
+
+[INFO] LV routing round 0, enlarge 10
+[INFO] 10 threshold, 10 expand
+[Overflow Report] total Usage   : 224999
+[Overflow Report] Max H Overflow: 33
+[Overflow Report] Max V Overflow: 10
+[Overflow Report] Max Overflow  : 33
+[Overflow Report] Num Overflow e: 556
+[Overflow Report] H   Overflow  : 1832
+[Overflow Report] V   Overflow  : 918
+[Overflow Report] Final Overflow: 2750
+
+[INFO] LV routing round 1, enlarge 15
+[INFO] 5 threshold, 15 expand
+[Overflow Report] total Usage   : 225411
+[Overflow Report] Max H Overflow: 0
+[Overflow Report] Max V Overflow: 2
+[Overflow Report] Max Overflow  : 2
+[Overflow Report] Num Overflow e: 5
+[Overflow Report] H   Overflow  : 0
+[Overflow Report] V   Overflow  : 6
+[Overflow Report] Final Overflow: 6
+
+[INFO] LV routing round 2, enlarge 20
+[INFO] 1 threshold, 20 expand
+[Overflow Report] total Usage   : 225399
+[Overflow Report] Max H Overflow: 0
+[Overflow Report] Max V Overflow: 1
+[Overflow Report] Max Overflow  : 1
+[Overflow Report] Num Overflow e: 1
+[Overflow Report] H   Overflow  : 0
+[Overflow Report] V   Overflow  : 1
+[Overflow Report] Final Overflow: 1
+
+Running extra iterations to remove overflow...
+Update congestion history type 1
+[INFO] iteration 1, enlarge 20, costheight 9, threshold 10 via cost 2
+[INFO] log_coef 2.000000, healingTrigger 0 cost_step 5 L 1 cost_type 1 updatetype 1
+[Overflow Report] total Usage   : 225404
+[Overflow Report] Max H Overflow: 0
+[Overflow Report] Max V Overflow: 0
+[Overflow Report] Max Overflow  : 0
+[Overflow Report] Num Overflow e: 0
+[Overflow Report] H   Overflow  : 0
+[Overflow Report] V   Overflow  : 0
+[Overflow Report] Final Overflow: 0
+
+Usage checked
+Maze routing finished
+[INFO] P3 runtime: 0.010000 sec
+[INFO] Final 2D results:
+[Overflow Report] total Usage   : 225404
+[Overflow Report] Max H Overflow: 0
+[Overflow Report] Max V Overflow: 0
+[Overflow Report] Max Overflow  : 0
+[Overflow Report] Num Overflow e: 0
+[Overflow Report] H   Overflow  : 0
+[Overflow Report] V   Overflow  : 0
+[Overflow Report] Final Overflow: 0
+
+Layer Assignment Begins
+Layer assignment finished
+[INFO] 2D + Layer Assignment Runtime: 3.140000 sec
+Post Processing Begins
+Post Processsing finished
+ Starting via filling
+[INFO] Via related to pin nodes 97899
+[INFO] Via related stiner nodes 5764
+Via filling finished
+
+Final usage/overflow report:
+[INFO] Usage per layer:
+    Layer 1 usage: 0
+    Layer 2 usage: 84724
+    Layer 3 usage: 85575
+    Layer 4 usage: 34208
+    Layer 5 usage: 21208
+    Layer 6 usage: 0
+
+[INFO] Capacity per layer:
+    Layer 1 capacity: 0
+    Layer 2 capacity: 154646
+    Layer 3 capacity: 146068
+    Layer 4 capacity: 101640
+    Layer 5 capacity: 66482
+    Layer 6 capacity: 11235
+
+[INFO] Use percentage per layer:
+    Layer 1 use percentage: 0.0%
+    Layer 2 use percentage: 54.79%
+    Layer 3 use percentage: 58.59%
+    Layer 4 use percentage: 33.66%
+    Layer 5 use percentage: 31.90%
+    Layer 6 use percentage: 0.00%
+
+[INFO] Overflow per layer:
+    Layer 1 overflow: 0
+    Layer 2 overflow: 0
+    Layer 3 overflow: 0
+    Layer 4 overflow: 0
+    Layer 5 overflow: 0
+    Layer 6 overflow: 0
+
+[Overflow Report] Total Usage   : 225715
+[Overflow Report] Total Capacity: 480071
+[Overflow Report] Max H Overflow: 0
+[Overflow Report] Max V Overflow: 0
+[Overflow Report] Max Overflow  : 0
+[Overflow Report] H   Overflow  : 0
+[Overflow Report] V   Overflow  : 0
+[Overflow Report] Final Overflow: 0
+
+[INFO] Final usage          : 225715
+[INFO] Final number of vias : 115328
+[INFO] Final usage 3D       : 571699
+[INFO GRT-0018] Total wirelength: 1992181 um
+
+```
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
 
   
 
