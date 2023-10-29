@@ -914,8 +914,10 @@ make test
 <summary>OpenLane Flow</summary>
 	
 <br>
+<details>
+	<summary>Steps to invoke OpenLane</summary>
 
-Steps to be followed:
+## Steps to be followed:
 
 + Create a folder in design - pes_cache_compression
 + Enter your designs folder
@@ -941,6 +943,11 @@ Steps to be followed:
   ![image](https://github.com/ShashidharReddy01/pes_cache_compression/assets/142148810/b0e27634-09d5-47ec-812a-0138048c27eb)
 
   ![image](https://github.com/ShashidharReddy01/pes_cache_compression/assets/142148810/80da9f6a-6753-4497-ae28-877968f59d95)
+</details>
+<details>
+<summary>Synthesis</summary>
+
+## Synthesis
 
 + Type `run_synthesis`
 
@@ -978,10 +985,15 @@ Steps to be followed:
 
   Flop Ratio = 0.06
   ```
-+ **Floorplan**
+</details>
+<details>
+	<summary>Floorplan</summary>
+	
+## Floorplan
   Physical design is process of transforming netlist into layout which is manufacture-able [GDS]. Physical design process is often referred as PnR (Place and Route) / APR (Automatic Place & Route). 
   Main steps in physical design are placement of all logical cells, clock tree synthesis & routing. During this process of physical design timing, power, design & technology constraints have to be 
   met. Further design might require being optimized w.r.t area, power and performance
+  
 + Invoke floorplan using command `run_floorplan`
 
   ![image](https://github.com/ShashidharReddy01/pes_cache_compression/assets/142148810/c8b44853-e4da-4a34-82b7-c7e082a92ebc)
@@ -1044,9 +1056,14 @@ Steps to be followed:
 
   ![image](https://github.com/ShashidharReddy01/pes_cache_compression/assets/142148810/72d338ee-bbba-4c22-8478-fc4ddcb9463b)
 
-+ **Clock Tree Synthesis(CTS):**
+</details>
+<details>
+	<summary>Clock Tree Synthesis</summary>
+	
+## Clock Tree Synthesis(CTS):
   Clock Tree Synthesis (CTS) is one of the most important stages in PnR. CTS QoR decides timing convergence & power. In most of the ICs clock consumes 30-40 % of total power. So efficient clock 
   architecture, clock gating & clock tree implementation helps to reduce power
+  
   - Type the command `run_cts`
     
     ![image](https://github.com/ShashidharReddy01/pes_cache_compression/assets/142148810/d9310763-7beb-4417-872d-222d7b188afb)
@@ -1061,9 +1078,12 @@ Steps to be followed:
 
     ![image](https://github.com/ShashidharReddy01/pes_cache_compression/assets/142148810/b0b39ead-c3f3-4ac4-a045-2ec061466728)
 
-+ **Routing**
-  Routing is the stage after Clock Tree Synthesis and optimization where-
+</details>
+<details>
+<summary>Routing</summary>
 
+## Routing
+  Routing is the stage after Clock Tree Synthesis and optimization where-
   Exact paths for the interconnection of standard cells and macros and I/O pins are determined.
   Electrical connections using metals and vias are created in the layout, defined by the logical connections present in the netlist.
   After CTS, we have information of all the placed cells, blockages, clock tree buffers/inverters and I/O pins. The tool relies on this information to electrically complete all connections defined in 
@@ -1300,7 +1320,7 @@ Final usage/overflow report:
 [INFO GRT-0018] Total wirelength: 1992181 um
 
 ```
-
+</details>
 
 
 
