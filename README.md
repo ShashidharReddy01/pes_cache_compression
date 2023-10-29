@@ -1322,26 +1322,27 @@ Final usage/overflow report:
 ```
 </details>
 
-
-
-
-
-
-
- 
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
 </details>
+
+# References
+
+You can follow the below mentioned sites for more information regarding the particular topics.
+
+- **RISC-V:** https://riscv.org/
+- **Makerchip Platform:** https://makerchip.com/
+- **TL-Verilog:** https://www.redwoodeda.com/tl-verilog  or http://tl-x.org/
+- **Redwood EDA:** https://www.redwoodeda.com/
+- **VLSI System Design:** https://www.vlsisystemdesign.com/
+
+# Acknowlegedgements
+
+- [Prof Mahesh Awati](https://in.linkedin.com/in/mahesh-awati-4423538b) Associate professor, PES University
+- [Kunal Ghosh](https://github.com/kunalg123), Co-founder, VSD Corp. Pvt. Ltd.
+- [Steve Hoover](https://github.com/stevehoover), Founder, Redwood EDA
+
+# Contact Information
+
+- Kunal Ghosh, Director, VSD Corp. Pvt. Ltd. (Email: kunalghosh@gmail.com)
+- Steve Hoover, Founder, Redwood EDA (Email: steve.hoover@redwoodeda.com)
+- Shashidhar V Reddy ,Student, PES University (Email : pes2202100627@pesu.pes.edu)
+
