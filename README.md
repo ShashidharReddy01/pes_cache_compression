@@ -1033,8 +1033,10 @@ make test
   ![image](https://github.com/ShashidharReddy01/pes_cache_compression/assets/142148810/4a714673-fb4f-4471-8aa7-339e5fa04e5b)
 
   
-
-
+</details>
+<details>
+<summary>Placement</summary>
+	
 + Invoke placement using command `run_placement`
 
   ![image](https://github.com/ShashidharReddy01/pes_cache_compression/assets/142148810/b49b2e04-4d51-465f-8ac5-9b99f83439ef)
@@ -1075,6 +1077,8 @@ make test
     ![image](https://github.com/ShashidharReddy01/pes_cache_compression/assets/142148810/780eacdf-ac05-4d37-b2ab-15c6a3d0a796)
 
     ![image](https://github.com/ShashidharReddy01/pes_cache_compression/assets/142148810/61793125-27b6-4fb3-b0aa-26e2714a86d0)
+    
+  - To invoke magic tool type  `magic -T /home/Vsduser/Desktop/OpenLane/pdks/sky130A/libs.tech/magic/sky130A.tech read ../../tmp/merged_unpadded.lef def read cache_compression.cts.def &`
 
     ![image](https://github.com/ShashidharReddy01/pes_cache_compression/assets/142148810/b0b39ead-c3f3-4ac4-a045-2ec061466728)
 
@@ -1153,6 +1157,8 @@ make test
   ![image](https://github.com/ShashidharReddy01/pes_cache_compression/assets/142148810/85e80776-43cc-4cdd-ad73-c96fcd09053c)
 
   ![image](https://github.com/ShashidharReddy01/pes_cache_compression/assets/142148810/20cb1236-d9a3-4697-a60b-754b9f61b853)
+
++ To invoke magic tool type  `magic -T /home/Vsduser/Desktop/OpenLane/pdks/sky130A/libs.tech/magic/sky130A.tech read ../../tmp/merged_unpadded.lef def read cache_compression.def &`
 
   ![image](https://github.com/ShashidharReddy01/pes_cache_compression/assets/142148810/c6111d18-e7b7-4ee5-a2e1-68808ee62451)
 
@@ -1324,23 +1330,14 @@ Final usage/overflow report:
 
 </details>
 
-# References
 
-You can follow the below mentioned sites for more information regarding the particular topics.
-
-- **RISC-V:** https://riscv.org/
-- **Makerchip Platform:** https://makerchip.com/
-- **TL-Verilog:** https://www.redwoodeda.com/tl-verilog  or http://tl-x.org/
-- **Redwood EDA:** https://www.redwoodeda.com/
-- **VLSI System Design:** https://www.vlsisystemdesign.com/
-
-# Acknowlegedgements
+## Acknowlegedgements
 
 - [Prof Mahesh Awati](https://in.linkedin.com/in/mahesh-awati-4423538b) Associate professor, PES University
 - [Kunal Ghosh](https://github.com/kunalg123), Co-founder, VSD Corp. Pvt. Ltd.
 - [Steve Hoover](https://github.com/stevehoover), Founder, Redwood EDA
 
-# Contact Information
+## Contact Information
 
 - Kunal Ghosh, Director, VSD Corp. Pvt. Ltd. (Email: kunalghosh@gmail.com)
 - Steve Hoover, Founder, Redwood EDA (Email: steve.hoover@redwoodeda.com)
