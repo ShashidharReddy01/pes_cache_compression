@@ -1082,6 +1082,15 @@ make test
 
     ![image](https://github.com/ShashidharReddy01/pes_cache_compression/assets/142148810/b0b39ead-c3f3-4ac4-a045-2ec061466728)
 
+    ![image](https://github.com/ShashidharReddy01/pes_cache_compression/assets/142148810/8b0a3f33-6086-4fb8-a456-975082836e4e)
+
+    ![image](https://github.com/ShashidharReddy01/pes_cache_compression/assets/142148810/f4b270e2-421d-4256-bc30-90659417e8fa)
+
+    ![image](https://github.com/ShashidharReddy01/pes_cache_compression/assets/142148810/a058ab3b-cb3e-4efb-bd7c-815823196d62)
+
+
+
+
 </details>
 <details>
 <summary>Routing</summary>
